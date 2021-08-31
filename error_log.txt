@@ -1,0 +1,169 @@
+Added by me for ref ......
+FIRST PHASE
+_____________________________
+un admin
+pw xxxxxxxxx5
+______________________
+(virt)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/simpleblogD2/ablog
+$ deactivate
+
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/simpleblogD2/ablog
+$ cd /d/PROJ
+
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ
+$ ls
+ CODE_HARRYD1/              dental/                            sim
+'Z-Non Executable Files'/   rad_setos/                         sim
+ cloned/                    school_learning_management/        slm
+ coreyblog/                 school_learning_management-main/
+ coreyblogD1/               setosblog/
+
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ
+$ mkdir coderedcms
+
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ
+$ cd coderedcms
+
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ ls
+
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ python -m venv virtual
+
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ ls
+virtual/
+
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ source virtual/Scripts/activate
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ ls
+virtual/
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ pip install coderedcms
+Collecting coderedcms
+  Downloading coderedcms-0.21.1-py3-none-any.whl (1.4 MB)
+Collecting beautifulsoup4<4.10,>=4.8
+
+SECOND PHASE
+
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ ls
+virtual/
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ coderedcms start testproj
+Creating a CodeRed CMS project called testproj
+Success! testproj has been created
+
+Next steps:
+    1. cd testproj/
+    2. python manage.py migrate
+    3. python manage.py createsuperuser
+    4. python manage.py runserver
+    5. Go to http://localhost:8000/admin/ and start editing!
+
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ ls
+testproj/  virtual/
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ ls
+testproj/  virtual/
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ cd testproj
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms/testproj
+$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, 
+
+THIRD PHASE
+
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ ls
+virtual/
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ coderedcms start testproj
+Creating a CodeRed CMS project called testproj
+Success! testproj has been created
+
+Next steps:
+    1. cd testproj/
+    2. python manage.py migrate
+    3. python manage.py createsuperuser
+    4. python manage.py runserver
+    5. Go to http://localhost:8000/admin/ and start editing!
+
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ ls
+testproj/  virtual/
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ ls
+testproj/  virtual/
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms
+$ cd testproj
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms/testproj
+$ python manage.py migrate
+Operations to perform:
+
+FOURTH PHASE 
+## creating super user
+# since in gitbash terminal add 'winpty' in the beginning 
+$ winpty python manage.py createsuperuser
+_________________________________________________
+HOW THE CUSTOM CSS FONT WORKS 
+
+[31/Aug/2021 08:20:34] "GET / HTTP/1.1" 200 9206
+[31/Aug/2021 08:20:34] "GET /static/website/css/anjalioldlipi-webfont.woff2 HTTP/1.1" 404 1990
+[31/Aug/2021 08:20:34] "GET /static/website/css/anjalioldlipi-webfont.woff HTTP/1.1" 404 1987
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms/testproj
+$
+_______________________________
+COMMENTS
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms/testproj
+$ pip install django-comments-xtd
+Collecting django-comments-xtd
+  Downloading django_comments_xtd-2.9.2-py3-none-any.whl (393 kB)
+
+Installing collected packages: docutils, django-contrib-comments, django-comments-xtd
+Successfully installed django-comments-xtd-2.9.2 django-contrib-comments-2.1.0 docutils-0.17.1
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms/testproj
+$
+
+ERROR
+    class Site(models.Model):
+  File "D:\PROJ\coderedcms\virtual\lib\site-packages\django\db\models\base.py", line 113, in __new__
+    raise RuntimeError(
+RuntimeError: Model class django.contrib.sites.models.Site doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+
+############################
+Git Message
+warning: CRLF will be replaced by LF in website/migrations/0002_initial_data.py.
+The file will have its original line endings in your working directory
+warning: CRLF will be replaced by LF in website/models.py.
+The file will have its original line endings in your working directory
+warning: CRLF will be replaced by LF in website/static/website/css/custom.css.
+The file will have its original line endings in your working directory
+(virtual)
+wayfr@DESKTOP-6GA2H13 MINGW64 /d/PROJ/coderedcms/testproj (master)
+$
+_________________
+____________________________________
+
+
